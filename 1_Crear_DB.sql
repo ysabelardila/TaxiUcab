@@ -1,3 +1,11 @@
+
+/*IMPORTANTE!! RECORDAR CAMBIAR EL DIRECTORIO*/
+/*CREATE OR REPLACE DIRECTORY DIR_VINOS as 'C:\Users\ycha1\Desktop\TaxiUcab\Imagenes';*/
+/
+/*grant read,write on directory DIR_VINOS to admin;*/
+
+
+
 CREATE OR REPLACE TYPE VALORACION AS OBJECT(
     nombreelemento varchar2(20),
     valor number,
@@ -635,8 +643,3 @@ ALTER TABLE VALORACIONPARTICIPANTE ADD CONSTRAINT VALORPARTPARTI_FK FOREIGN KEY 
 
 
 
-
-/
-CREATE OR REPLACE DIRECTORY DIR_VINOS as 'C:\Users\Jhohana\Desktop\Proyecto de Bases\Imagenes';
-/
-/*grant read,write on directory DIR_VINOS to admin;*/
