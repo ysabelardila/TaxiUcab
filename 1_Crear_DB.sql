@@ -177,6 +177,7 @@ CREATE TABLE USUARIO(
   email varchar2(50) not null,
   foto BLOB not null,
   id_cli number not null,
+  id_par number not null,
   check (tipo in('natural','ejecutivo'))
 );
 /
@@ -360,6 +361,8 @@ END;
 /
 /
 ALTER TABLE USUARIO ADD CONSTRAINT USUARIOCLIENTE_FK FOREIGN KEY (id_cli) REFERENCES CLIENTE(id_cliente);
+/
+ALTER TABLE USUARIO ADD CONSTRAINT USUARIOPARROQUIA_FK FOREIGN KEY (id_par) REFERENCES PARROQUIA(id_par);
 /
 ALTER TABLE FAVORITO ADD CONSTRAINT FAVORITOUSUARIO_FK1 FOREIGN KEY (id_us) REFERENCES USUARIO(id_usuario);
 /
