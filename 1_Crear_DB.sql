@@ -1,6 +1,6 @@
 /
-/*CREATE OR REPLACE DIRECTORY DIR_TAXI as 'D:\UNIDAD DATA\Luis DATA\Universidad - DD 30-11-17\9no Semestre\Bases II\Proyecto\BFILES';
-/*/
+CREATE OR REPLACE DIRECTORY DIR_TAXI as 'C:\Users\ycha1\Desktop\TaxiUcab\Imagenes';
+/
 /*grant read,write on directory DIR_TAXI to admin;*/
 /
 CREATE OR REPLACE TYPE TELEFONO AS OBJECT(
@@ -177,6 +177,7 @@ CREATE TABLE USUARIO(
   email varchar2(50) not null,
   foto BLOB not null,
   id_cli number not null,
+  id_par number not null,
   check (tipo in('natural','ejecutivo'))
 );
 /
@@ -360,6 +361,8 @@ END;
 /
 /
 ALTER TABLE USUARIO ADD CONSTRAINT USUARIOCLIENTE_FK FOREIGN KEY (id_cli) REFERENCES CLIENTE(id_cliente);
+/
+ALTER TABLE USUARIO ADD CONSTRAINT USUARIOPARROQUIA_FK FOREIGN KEY (id_par) REFERENCES PARROQUIA(id_parroquia);
 /
 ALTER TABLE FAVORITO ADD CONSTRAINT FAVORITOUSUARIO_FK1 FOREIGN KEY (id_us) REFERENCES USUARIO(id_usuario);
 /
