@@ -1127,7 +1127,7 @@ BEGIN
   DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
   DBMS_LOB.fileclose(l_bfile);
   COMMIT;
- 
+
 EXCEPTION WHEN OTHERS THEN
    ROLLBACK;
    RAISE;
@@ -1146,7 +1146,7 @@ BEGIN
   DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
   DBMS_LOB.fileclose(l_bfile);
   COMMIT;
- 
+
 EXCEPTION WHEN OTHERS THEN
    ROLLBACK;
    RAISE;
@@ -1166,7 +1166,7 @@ BEGIN
   DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
   DBMS_LOB.fileclose(l_bfile);
   COMMIT;
- 
+
 EXCEPTION WHEN OTHERS THEN
    ROLLBACK;
    RAISE;
@@ -1186,7 +1186,7 @@ BEGIN
   DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
   DBMS_LOB.fileclose(l_bfile);
   COMMIT;
- 
+
 EXCEPTION WHEN OTHERS THEN
    ROLLBACK;
    RAISE;
@@ -1207,7 +1207,7 @@ BEGIN
   DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
   DBMS_LOB.fileclose(l_bfile);
   COMMIT;
- 
+
 EXCEPTION WHEN OTHERS THEN
    ROLLBACK;
    RAISE;
@@ -1228,7 +1228,7 @@ BEGIN
   DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
   DBMS_LOB.fileclose(l_bfile);
   COMMIT;
- 
+
 EXCEPTION WHEN OTHERS THEN
    ROLLBACK;
    RAISE;
@@ -1249,7 +1249,7 @@ BEGIN
   DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
   DBMS_LOB.fileclose(l_bfile);
   COMMIT;
- 
+
 EXCEPTION WHEN OTHERS THEN
    ROLLBACK;
    RAISE;
@@ -1270,7 +1270,7 @@ BEGIN
   DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
   DBMS_LOB.fileclose(l_bfile);
   COMMIT;
- 
+
 EXCEPTION WHEN OTHERS THEN
    ROLLBACK;
    RAISE;
@@ -1291,7 +1291,7 @@ BEGIN
   DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
   DBMS_LOB.fileclose(l_bfile);
   COMMIT;
- 
+
 EXCEPTION WHEN OTHERS THEN
    ROLLBACK;
    RAISE;
@@ -1312,7 +1312,7 @@ BEGIN
   DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
   DBMS_LOB.fileclose(l_bfile);
   COMMIT;
- 
+
 EXCEPTION WHEN OTHERS THEN
    ROLLBACK;
    RAISE;
@@ -1335,7 +1335,7 @@ BEGIN
   DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
   DBMS_LOB.fileclose(l_bfile);
   COMMIT;
- 
+
 EXCEPTION WHEN OTHERS THEN
    ROLLBACK;
    RAISE;
@@ -1354,7 +1354,7 @@ BEGIN
   DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
   DBMS_LOB.fileclose(l_bfile);
   COMMIT;
- 
+
 EXCEPTION WHEN OTHERS THEN
    ROLLBACK;
    RAISE;
@@ -1374,7 +1374,7 @@ BEGIN
   DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
   DBMS_LOB.fileclose(l_bfile);
   COMMIT;
- 
+
 EXCEPTION WHEN OTHERS THEN
    ROLLBACK;
    RAISE;
@@ -1394,7 +1394,7 @@ BEGIN
   DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
   DBMS_LOB.fileclose(l_bfile);
   COMMIT;
- 
+
 EXCEPTION WHEN OTHERS THEN
    ROLLBACK;
    RAISE;
@@ -1414,7 +1414,7 @@ BEGIN
   DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
   DBMS_LOB.fileclose(l_bfile);
   COMMIT;
- 
+
 EXCEPTION WHEN OTHERS THEN
    ROLLBACK;
    RAISE;
@@ -1434,7 +1434,7 @@ BEGIN
   DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
   DBMS_LOB.fileclose(l_bfile);
   COMMIT;
- 
+
 EXCEPTION WHEN OTHERS THEN
    ROLLBACK;
    RAISE;
@@ -1454,7 +1454,7 @@ BEGIN
   DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
   DBMS_LOB.fileclose(l_bfile);
   COMMIT;
- 
+
 EXCEPTION WHEN OTHERS THEN
    ROLLBACK;
    RAISE;
@@ -1474,7 +1474,7 @@ BEGIN
   DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
   DBMS_LOB.fileclose(l_bfile);
   COMMIT;
- 
+
 EXCEPTION WHEN OTHERS THEN
    ROLLBACK;
    RAISE;
@@ -1494,7 +1494,7 @@ BEGIN
   DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
   DBMS_LOB.fileclose(l_bfile);
   COMMIT;
- 
+
 EXCEPTION WHEN OTHERS THEN
    ROLLBACK;
    RAISE;
@@ -1514,7 +1514,7 @@ BEGIN
   DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
   DBMS_LOB.fileclose(l_bfile);
   COMMIT;
- 
+
 EXCEPTION WHEN OTHERS THEN
    ROLLBACK;
    RAISE;
@@ -1584,3 +1584,18 @@ insert into HIST_PRECIO_KM values (null, 2000, sysdate, 'true');
 /
 
 
+/*VEHICULO*/
+INSERT INTO VEHICULO VALUES (1,'AA421ND','MITSUBISHI','BEIGE','true','true','false',2009,BFILENAME('DIR_TAXI/DOC_PROD', 'prod1.pdf'),BFILENAME('DIR_TAXI/CARN_CIRC', 'carnet1.pdf'),'activo');
+INSERT INTO VEHICULO VALUES (2,'AA672ND','MITSUBISHI','ROJO','false','true','false',2000,BFILENAME('DIR_TAXI/DOC_PROD', 'prod2.pdf'),BFILENAME('DIR_TAXI/CARN_CIRC', 'carnet2.pdf'),'activo');
+INSERT INTO VEHICULO VALUES (3,'AA111ND','TOYOTA','AZUL','true','true','true',2010,BFILENAME('DIR_TAXI/DOC_PROD', 'prod3.pdf'),BFILENAME('DIR_TAXI/CARN_CIRC', 'carnet3.pdf'),'activo');
+INSERT INTO VEHICULO VALUES (4,'AA534BC','TOYOTA','AMARILLO','true','true','false',2000,BFILENAME('DIR_TAXI/DOC_PROD', 'prod4.pdf'),BFILENAME('DIR_TAXI/CARN_CIRC', 'carnet4.pdf'),'inactivo');
+INSERT INTO VEHICULO VALUES (5,'AA603DN','FORD','AMARILLO','false','false','false',2009,BFILENAME('DIR_TAXI/DOC_PROD', 'prod5.pdf'),BFILENAME('DIR_TAXI/CARN_CIRC', 'carnet5.pdf'),'activo');
+INSERT INTO VEHICULO VALUES (6,'AA473FJ','FORD','BEIGE','true','false','true',2012,BFILENAME('DIR_TAXI/DOC_PROD', 'prod6.pdf'),BFILENAME('DIR_TAXI/CARN_CIRC', 'carnet6.pdf'),'activo');
+INSERT INTO VEHICULO VALUES (7,'AA593TK','BMW','AZUL','true','true','false',2008,BFILENAME('DIR_TAXI/DOC_PROD', 'prod7.pdf'),BFILENAME('DIR_TAXI/CARN_CIRC', 'carnet7.pdf'),'inactivo');
+INSERT INTO VEHICULO VALUES (8,'AA470ER','BMW','ROJO','true','false','false',2015,BFILENAME('DIR_TAXI/DOC_PROD', 'prod8.pdf'),BFILENAME('DIR_TAXI/CARN_CIRC', 'carnet8.pdf'),'activo');
+INSERT INTO VEHICULO VALUES (9,'AA953AE','FIAT','BLANCO','true','false','true',2015,BFILENAME('DIR_TAXI/DOC_PROD', 'prod9.pdf'),BFILENAME('DIR_TAXI/CARN_CIRC', 'carnet9.pdf'),'activo');
+INSERT INTO VEHICULO VALUES (10,'AA436CS','FIAT','BLANCO','true','false','false',2015,BFILENAME('DIR_TAXI/DOC_PROD', 'prod10.pdf'),BFILENAME('DIR_TAXI/CARN_CIRC', 'carnet10.pdf'),'activo');
+INSERT INTO VEHICULO VALUES (11,'AA743FK','DODGE','BLANCO','false','true','false',2000,BFILENAME('DIR_TAXI/DOC_PROD', 'prod11.pdf'),BFILENAME('DIR_TAXI/CARN_CIRC', 'carnet11.pdf'),'activo');
+INSERT INTO VEHICULO VALUES (12,'AA464ND','DODGE','GRIS','false','true','true',2000,BFILENAME('DIR_TAXI/DOC_PROD', 'prod12.pdf'),BFILENAME('DIR_TAXI/CARN_CIRC', 'carnet12.pdf'),'inactivo');
+
+/
