@@ -1,9 +1,31 @@
+/*Inserts CLiente*/
+/
+INSERT INTO CLIENTE VALUES(null,DATOS(995234,'MARIA INES','ABADIE',to_date('22/09/95','DD/MM/RR'),TELEFONO('+59','424','2213211')));
+/
+INSERT INTO CLIENTE VALUES(null,DATOS(1249609,'RAQUEL ELIZABET','ABAL',to_date('08/10/68','DD/MM/RR'),TELEFONO('+59','414','7249399')));
+/
+INSERT INTO CLIENTE VALUES(null,DATOS(1987304,'PABLO DANIEL','BARAIBAR',to_date('28/08/01','DD/MM/RR'),TELEFONO('+59','416','3762559')));
+/
+INSERT INTO CLIENTE VALUES(null,DATOS(1455322,'MERCEDES MARIA','BARANZANO',to_date('08/03/94','DD/MM/RR'),TELEFONO('+59','412','7499720')));
+/
+INSERT INTO CLIENTE VALUES(null,DATOS(1033368,'SERGIO','CAMARAN',to_date('06/03/64','DD/MM/RR'),TELEFONO('+59','426','7765478')));
+/
+INSERT INTO CLIENTE VALUES(null,DATOS(1178833,'DORITA','CAMIﾃ前',to_date('13/03/65','DD/MM/RR'),TELEFONO('+59','424','7777362')));
+/
+INSERT INTO CLIENTE VALUES(null,DATOS(3502446,'ASUCENA','DIAZ',to_date('08/10/79','DD/MM/RR'),TELEFONO('+59','414','7904288')));
+/
+INSERT INTO CLIENTE VALUES(null,DATOS(1546970,'LUIS','DIBARBOURE',to_date('14/04/80','DD/MM/RR'),TELEFONO('+59','416','2256478')));
+/
+INSERT INTO CLIENTE VALUES(null,DATOS(3291049,'NESTOR DANIEL','GARCIA',to_date('13/03/70','DD/MM/RR'),TELEFONO('+59','412','2689458')));
+/
+INSERT INTO CLIENTE VALUES(null,DATOS(2956258,'LUIS LEONARDO','GARCIA',to_date('22/09/65','DD/MM/RR'),TELEFONO('+59','426','7862539')));
+
 /
 INSERT INTO PARROQUIA VALUES(null,'El Cafetal','Miranda');
 /
 INSERT INTO PARROQUIA VALUES(null,'Las Minas','Miranda');
 /
-INSERT INTO PARROQUIA VALUES(null,'Nuestra Sera del Rosario','Miranda');
+INSERT INTO PARROQUIA VALUES(null,'Nuestra Seﾃｱora del Rosario','Miranda');
 /
 INSERT INTO PARROQUIA VALUES(null,'Chacao','Miranda');
 /
@@ -1088,3 +1110,477 @@ Insert into SYSTEM.RUTA (KILOMETROS,ID_PAR_ORIGEN,ID_PAR_DESTINO) values ('5','3
 Insert into SYSTEM.RUTA (KILOMETROS,ID_PAR_ORIGEN,ID_PAR_DESTINO) values ('8','32','31');
 Insert into SYSTEM.RUTA (KILOMETROS,ID_PAR_ORIGEN,ID_PAR_DESTINO) values ('2','32','32');
 /
+
+
+/*Inserts Usuario--------------------------------------------------------------------------------------------------------------------*/
+/*Recordar crear directorio*/
+--Fila 1
+DECLARE
+  l_bfile  BFILE;
+  l_blob   BLOB;
+BEGIN
+  INSERT INTO USUARIO (USUARIO, PASSWORD, TIPO, EMAIL, FOTO, ID_CLI, ID_PAR) VALUES ('@miabadie','1234','natural','MIABADIE@gmail.com',EMPTY_BLOB(),1.0,1.0)
+  RETURN FOTO INTO l_blob;
+
+  l_bfile := BFILENAME('DIR_VINOS', '1maria.jpg');
+  DBMS_LOB.fileopen(l_bfile, Dbms_Lob.File_Readonly);
+  DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
+  DBMS_LOB.fileclose(l_bfile);
+  COMMIT;
+ 
+EXCEPTION WHEN OTHERS THEN
+   ROLLBACK;
+   RAISE;
+END;
+/
+--Fila 2
+DECLARE
+  l_bfile  BFILE;
+  l_blob   BLOB;
+BEGIN
+  INSERT INTO USUARIO (USUARIO, PASSWORD, TIPO, EMAIL, FOTO, ID_CLI,ID_PAR) VALUES ('@reabal','1234','natural','REABAL@hotmail.com',EMPTY_BLOB(),2.0,1.0)
+  RETURN FOTO INTO l_blob;
+
+  l_bfile := BFILENAME('DIR_VINOS', '2raquel.jpg');
+  DBMS_LOB.fileopen(l_bfile, Dbms_Lob.File_Readonly);
+  DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
+  DBMS_LOB.fileclose(l_bfile);
+  COMMIT;
+ 
+EXCEPTION WHEN OTHERS THEN
+   ROLLBACK;
+   RAISE;
+END;
+
+--Fila 3
+/
+DECLARE
+  l_bfile  BFILE;
+  l_blob   BLOB;
+BEGIN
+  INSERT INTO USUARIO (USUARIO, PASSWORD, TIPO, EMAIL, FOTO, ID_CLI,ID_PAR) VALUES ('@pdbaraibar','1234','natural','PDBARAIBAR@yahoo.es',EMPTY_BLOB(),3.0,1.0)
+  RETURN FOTO INTO l_blob;
+
+  l_bfile := BFILENAME('DIR_VINOS', '3pablo.jpg');
+  DBMS_LOB.fileopen(l_bfile, Dbms_Lob.File_Readonly);
+  DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
+  DBMS_LOB.fileclose(l_bfile);
+  COMMIT;
+ 
+EXCEPTION WHEN OTHERS THEN
+   ROLLBACK;
+   RAISE;
+END;
+
+--Fila 4
+/
+DECLARE
+  l_bfile  BFILE;
+  l_blob   BLOB;
+BEGIN
+  INSERT INTO USUARIO (USUARIO, PASSWORD, TIPO, EMAIL, FOTO, ID_CLI,ID_PAR) VALUES ('@mmbaranzano','1234','natural','MMBARANZANO@outlook.com',EMPTY_BLOB(),4.0,1.0)
+  RETURN FOTO INTO l_blob;
+
+  l_bfile := BFILENAME('DIR_VINOS', '4mercedes.jpg');
+  DBMS_LOB.fileopen(l_bfile, Dbms_Lob.File_Readonly);
+  DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
+  DBMS_LOB.fileclose(l_bfile);
+  COMMIT;
+ 
+EXCEPTION WHEN OTHERS THEN
+   ROLLBACK;
+   RAISE;
+END;
+
+
+--Fila 5
+/
+DECLARE
+  l_bfile  BFILE;
+  l_blob   BLOB;
+BEGIN
+  INSERT INTO USUARIO (USUARIO, PASSWORD, TIPO, EMAIL, FOTO, ID_CLI,ID_PAR) VALUES ('@scamaran','1234','natural','SCAMARAN@outlook.com',EMPTY_BLOB(),5.0,1.0)
+  RETURN FOTO INTO l_blob;
+
+  l_bfile := BFILENAME('DIR_VINOS', '5sergio.jpg');
+  DBMS_LOB.fileopen(l_bfile, Dbms_Lob.File_Readonly);
+  DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
+  DBMS_LOB.fileclose(l_bfile);
+  COMMIT;
+ 
+EXCEPTION WHEN OTHERS THEN
+   ROLLBACK;
+   RAISE;
+END;
+
+
+--Fila 6
+/
+DECLARE
+  l_bfile  BFILE;
+  l_blob   BLOB;
+BEGIN
+  INSERT INTO USUARIO (USUARIO, PASSWORD, TIPO, EMAIL, FOTO, ID_CLI,ID_PAR) VALUES ('@dcamiﾃｱo','1234','natural','DCAMIﾃ前@gmail.com',EMPTY_BLOB(),6.0,1.0)
+  RETURN FOTO INTO l_blob;
+
+  l_bfile := BFILENAME('DIR_VINOS', '6dorita.jpg');
+  DBMS_LOB.fileopen(l_bfile, Dbms_Lob.File_Readonly);
+  DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
+  DBMS_LOB.fileclose(l_bfile);
+  COMMIT;
+ 
+EXCEPTION WHEN OTHERS THEN
+   ROLLBACK;
+   RAISE;
+END;
+
+
+--Fila 7
+/
+DECLARE
+  l_bfile  BFILE;
+  l_blob   BLOB;
+BEGIN
+  INSERT INTO USUARIO (USUARIO, PASSWORD, TIPO, EMAIL, FOTO, ID_CLI,ID_PAR) VALUES ('@adiaz','1234','natural','ADIAZ@outlook.com',EMPTY_BLOB(),7.0,1.0)
+  RETURN FOTO INTO l_blob;
+
+  l_bfile := BFILENAME('DIR_VINOS', '7asucena.jpg');
+  DBMS_LOB.fileopen(l_bfile, Dbms_Lob.File_Readonly);
+  DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
+  DBMS_LOB.fileclose(l_bfile);
+  COMMIT;
+ 
+EXCEPTION WHEN OTHERS THEN
+   ROLLBACK;
+   RAISE;
+END;
+
+
+--Fila 8
+/
+DECLARE
+  l_bfile  BFILE;
+  l_blob   BLOB;
+BEGIN
+  INSERT INTO USUARIO (USUARIO, PASSWORD, TIPO, EMAIL, FOTO, ID_CLI,ID_PAR) VALUES ('@ldibarboure','1234','natural','LDIBARBOURE@gmail.com',EMPTY_BLOB(),8.0,1.0)
+  RETURN FOTO INTO l_blob;
+
+  l_bfile := BFILENAME('DIR_VINOS', '8luis.jpg');
+  DBMS_LOB.fileopen(l_bfile, Dbms_Lob.File_Readonly);
+  DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
+  DBMS_LOB.fileclose(l_bfile);
+  COMMIT;
+ 
+EXCEPTION WHEN OTHERS THEN
+   ROLLBACK;
+   RAISE;
+END;
+
+
+--Fila 9
+/
+DECLARE
+  l_bfile  BFILE;
+  l_blob   BLOB;
+BEGIN
+  INSERT INTO USUARIO (USUARIO, PASSWORD, TIPO, EMAIL, FOTO, ID_CLI, ID_PAR) VALUES ('@ndgarcia','1234','natural','NDGARCIA@outlook.com',EMPTY_BLOB(),9.0,1.0)
+  RETURN FOTO INTO l_blob;
+
+  l_bfile := BFILENAME('DIR_VINOS', '9nestor.jpg');
+  DBMS_LOB.fileopen(l_bfile, Dbms_Lob.File_Readonly);
+  DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
+  DBMS_LOB.fileclose(l_bfile);
+  COMMIT;
+ 
+EXCEPTION WHEN OTHERS THEN
+   ROLLBACK;
+   RAISE;
+END;
+
+
+--Fila 10
+/
+DECLARE
+  l_bfile  BFILE;
+  l_blob   BLOB;
+BEGIN
+  INSERT INTO USUARIO (USUARIO, PASSWORD, TIPO, EMAIL, FOTO, ID_CLI, ID_PAR) VALUES ('@llgarcia','1234','natural','LLGARCIA@gmail.com',EMPTY_BLOB(),10.0,1.0)
+  RETURN FOTO INTO l_blob;
+
+  l_bfile := BFILENAME('DIR_VINOS', '10luis.jpg');
+  DBMS_LOB.fileopen(l_bfile, Dbms_Lob.File_Readonly);
+  DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
+  DBMS_LOB.fileclose(l_bfile);
+  COMMIT;
+ 
+EXCEPTION WHEN OTHERS THEN
+   ROLLBACK;
+   RAISE;
+END;
+/
+
+
+/*inserts conductor*/------------------------------------------------------------------------------------------------------------------
+
+--Fila 1
+DECLARE
+  l_bfile  BFILE;
+  l_blob   BLOB;
+BEGIN
+  INSERT INTO CONDUCTOR VALUES (null,DATOS(2543328,'ALBERTO OSCAR','ABALOS',to_date('15/12/1985','DD/MM/YYYY'),TELEFONO('+59','424','4510230')),BFILENAME('DIR_VINOS', 'cond1ced.pdf'),'@mrabalde','1234','mrabalde@yahoo.es','inactivo',EMPTY_BLOB(),0.0,1.0)
+  RETURN FOTO INTO l_blob;
+
+  l_bfile := BFILENAME('DIR_VINOS', 'cond1.jpg');
+  DBMS_LOB.fileopen(l_bfile, Dbms_Lob.File_Readonly);
+  DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
+  DBMS_LOB.fileclose(l_bfile);
+  COMMIT;
+ 
+EXCEPTION WHEN OTHERS THEN
+   ROLLBACK;
+   RAISE;
+END;
+--Fila 2
+/
+DECLARE
+  l_bfile  BFILE;
+  l_blob   BLOB;
+BEGIN
+  INSERT INTO CONDUCTOR VALUES (null,DATOS(1385554,'MARﾃ喉 ROSARIO','ABALDE',to_date('14/04/1970','DD/MM/YYYY'),TELEFONO('+59','414','8727943')),BFILENAME('DIR_VINOS', 'cond2ced.pdf'),'@aabarno','1234','aabarno@gmail.com','inactivo',EMPTY_BLOB(),0.0,1.0)
+  RETURN FOTO INTO l_blob;
+
+  l_bfile := BFILENAME('DIR_VINOS', 'cond2.jpg');
+  DBMS_LOB.fileopen(l_bfile, Dbms_Lob.File_Readonly);
+  DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
+  DBMS_LOB.fileclose(l_bfile);
+  COMMIT;
+ 
+EXCEPTION WHEN OTHERS THEN
+   ROLLBACK;
+   RAISE;
+END;
+
+--Fila 3
+/
+DECLARE
+  l_bfile  BFILE;
+  l_blob   BLOB;
+BEGIN
+  INSERT INTO CONDUCTOR VALUES (null,DATOS(3326849,'ARIEL','ABARNO',to_date('16/08/1980','DD/MM/YYYY'),TELEFONO('+59','416','5519004')),BFILENAME('DIR_VINOS', 'cond3ced.pdf'),'@wfbaptista','1234','wfbaptista@hotmail.com','inactivo',EMPTY_BLOB(),0.0,1.0)
+  RETURN FOTO INTO l_blob;
+
+  l_bfile := BFILENAME('DIR_VINOS', 'cond3.jpg');
+  DBMS_LOB.fileopen(l_bfile, Dbms_Lob.File_Readonly);
+  DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
+  DBMS_LOB.fileclose(l_bfile);
+  COMMIT;
+ 
+EXCEPTION WHEN OTHERS THEN
+   ROLLBACK;
+   RAISE;
+END;
+
+--Fila 4
+/
+DECLARE
+  l_bfile  BFILE;
+  l_blob   BLOB;
+BEGIN
+  INSERT INTO CONDUCTOR VALUES (null,DATOS(3588497,'WINSTON FRANKLIN','BAPTISTA',to_date('14/03/1968','DD/MM/YYYY'),TELEFONO('+59','412','9939615')),BFILENAME('DIR_VINOS', 'cond4ced.pdf'),'@hjcamirotti','1234','hjcamirotti@hotmail.com','inactivo',EMPTY_BLOB(),0.0,1.0)
+  RETURN FOTO INTO l_blob;
+
+  l_bfile := BFILENAME('DIR_VINOS', 'cond4.jpg');
+  DBMS_LOB.fileopen(l_bfile, Dbms_Lob.File_Readonly);
+  DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
+  DBMS_LOB.fileclose(l_bfile);
+  COMMIT;
+ 
+EXCEPTION WHEN OTHERS THEN
+   ROLLBACK;
+   RAISE;
+END;
+
+--Fila 5
+/
+DECLARE
+  l_bfile  BFILE;
+  l_blob   BLOB;
+BEGIN
+  INSERT INTO CONDUCTOR VALUES (null,DATOS(655000,'HUGO JOSE','CAMIROTTI',to_date('11/11/1994','DD/MM/YYYY'),TELEFONO('+59','426','2379864')),BFILENAME('DIR_VINOS', 'cond5ced.pdf'),'@jbbaptista','1234','jbbaptista@yahoo.es','inactivo',EMPTY_BLOB(),0.0,1.0)
+  RETURN FOTO INTO l_blob;
+
+  l_bfile := BFILENAME('DIR_VINOS', 'cond5.jpg');
+  DBMS_LOB.fileopen(l_bfile, Dbms_Lob.File_Readonly);
+  DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
+  DBMS_LOB.fileclose(l_bfile);
+  COMMIT;
+ 
+EXCEPTION WHEN OTHERS THEN
+   ROLLBACK;
+   RAISE;
+END;
+
+--Fila 6
+/
+DECLARE
+  l_bfile  BFILE;
+  l_blob   BLOB;
+BEGIN
+  INSERT INTO CONDUCTOR VALUES (null,DATOS(3877670,'JOSE BARTOLOME','BAPTISTA',to_date('21/02/2000','DD/MM/YYYY'),TELEFONO('+59','424','2614978')),BFILENAME('DIR_VINOS', 'cond6ced.pdf'),'@nebaraibar','1234','nebaraibar@outlook.com','inactivo',EMPTY_BLOB(),0.0,1.0)
+  RETURN FOTO INTO l_blob;
+
+  l_bfile := BFILENAME('DIR_VINOS', 'cond6.jpg');
+  DBMS_LOB.fileopen(l_bfile, Dbms_Lob.File_Readonly);
+  DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
+  DBMS_LOB.fileclose(l_bfile);
+  COMMIT;
+ 
+EXCEPTION WHEN OTHERS THEN
+   ROLLBACK;
+   RAISE;
+END;
+
+--Fila 7
+/
+DECLARE
+  l_bfile  BFILE;
+  l_blob   BLOB;
+BEGIN
+  INSERT INTO CONDUCTOR VALUES (null,DATOS(1679960,'NELSON EDUARDO','BARAIBAR',to_date('17/05/2001','DD/MM/YYYY'),TELEFONO('+59','414','3444275')),BFILENAME('DIR_VINOS', 'cond7ced.pdf'),'@rcamaran','1234','rcamaran@hotmail.com','inactivo',EMPTY_BLOB(),0.0,1.0)
+  RETURN FOTO INTO l_blob;
+
+  l_bfile := BFILENAME('DIR_VINOS', 'cond7.jpg');
+  DBMS_LOB.fileopen(l_bfile, Dbms_Lob.File_Readonly);
+  DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
+  DBMS_LOB.fileclose(l_bfile);
+  COMMIT;
+ 
+EXCEPTION WHEN OTHERS THEN
+   ROLLBACK;
+   RAISE;
+END;
+
+--Fila 8
+/
+DECLARE
+  l_bfile  BFILE;
+  l_blob   BLOB;
+BEGIN
+  INSERT INTO CONDUCTOR VALUES (null,DATOS(3420734,'ROBERTO','CAMARAN',to_date('28/08/1960','DD/MM/YYYY'),TELEFONO('+59','416','8202250')),BFILENAME('DIR_VINOS', 'cond8ced.pdf'),'@ercamiﾃｱo','1234','ercamiﾃｱo@yahoo.es','inactivo',EMPTY_BLOB(),0.0,1.0)
+  RETURN FOTO INTO l_blob;
+
+  l_bfile := BFILENAME('DIR_VINOS', 'cond8.jpg');
+  DBMS_LOB.fileopen(l_bfile, Dbms_Lob.File_Readonly);
+  DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
+  DBMS_LOB.fileclose(l_bfile);
+  COMMIT;
+ 
+EXCEPTION WHEN OTHERS THEN
+   ROLLBACK;
+   RAISE;
+END;
+
+--Fila 9
+/
+DECLARE
+  l_bfile  BFILE;
+  l_blob   BLOB;
+BEGIN
+  INSERT INTO CONDUCTOR VALUES (null,DATOS(1057290,'EDGARDO RAMON','CAMIﾃ前',to_date('08/03/1972','DD/MM/YYYY'),TELEFONO('+59','412','3862874')),BFILENAME('DIR_VINOS', 'cond9ced.pdf'),'@dhcamirotti','1234','dhcamirotti@outlook.com','inactivo',EMPTY_BLOB(),0.0,1.0)
+  RETURN FOTO INTO l_blob;
+
+  l_bfile := BFILENAME('DIR_VINOS', 'cond9.jpg');
+  DBMS_LOB.fileopen(l_bfile, Dbms_Lob.File_Readonly);
+  DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
+  DBMS_LOB.fileclose(l_bfile);
+  COMMIT;
+ 
+EXCEPTION WHEN OTHERS THEN
+   ROLLBACK;
+   RAISE;
+END;
+
+--Fila 10
+/
+DECLARE
+  l_bfile  BFILE;
+  l_blob   BLOB;
+BEGIN
+  INSERT INTO CONDUCTOR VALUES (null,DATOS(1648800,'DENISE HAIFA','CAMIROTTI',to_date('06/08/1984','DD/MM/YYYY'),TELEFONO('+59','426','2321070')),BFILENAME('DIR_VINOS', 'cond10ced.pdf'),'@dhcamirotti','1234','dhcamirotti@outlook.com','inactivo',EMPTY_BLOB(),0.0,1.0)
+  RETURN FOTO INTO l_blob;
+
+  l_bfile := BFILENAME('DIR_VINOS', 'cond10.jpg');
+  DBMS_LOB.fileopen(l_bfile, Dbms_Lob.File_Readonly);
+  DBMS_LOB.loadfromfile(l_blob,l_bfile,DBMS_LOB.getlength(l_bfile));
+  DBMS_LOB.fileclose(l_bfile);
+  COMMIT;
+ 
+EXCEPTION WHEN OTHERS THEN
+   ROLLBACK;
+   RAISE;
+END;
+
+/
+
+/*TARJETA DE CREDITO*/----------------------------------------------------------------------------------------------------------------
+Insert into SYSTEM.TARJETA_CREDITO (ID_FORMA_PAGO,TIPO,NOMBRE,FECHA_VENCI,NUM_SEGURIDAD,NUM_TAJETA,ID_US) values (null,'mastercard','MARIA INES ABADIE',to_date('17/05/25','DD/MM/RR'),'132','5543883512395010','1');
+/
+Insert into SYSTEM.TARJETA_CREDITO (ID_FORMA_PAGO,TIPO,NOMBRE,FECHA_VENCI,NUM_SEGURIDAD,NUM_TAJETA,ID_US) values (null,'visa','RAQUEL ELIZABET ABAL',to_date('22/09/21','DD/MM/RR'),'365','3770391848330060','2');
+/
+Insert into SYSTEM.TARJETA_CREDITO (ID_FORMA_PAGO,TIPO,NOMBRE,FECHA_VENCI,NUM_SEGURIDAD,NUM_TAJETA,ID_US) values (null,'mastercard','PABLO DANIEL BARAIBAR',to_date('03/10/20','DD/MM/RR'),'896','6016187050294570','3');
+/
+Insert into SYSTEM.TARJETA_CREDITO (ID_FORMA_PAGO,TIPO,NOMBRE,FECHA_VENCI,NUM_SEGURIDAD,NUM_TAJETA,ID_US) values (null,'visa','MERCEDES MARIA BARANZANO',to_date('13/06/22','DD/MM/RR'),'254','4405452922701800','4');
+/
+Insert into SYSTEM.TARJETA_CREDITO (ID_FORMA_PAGO,TIPO,NOMBRE,FECHA_VENCI,NUM_SEGURIDAD,NUM_TAJETA,ID_US) values (null,'mastercard','SERGIO CAMARAN',to_date('12/01/23','DD/MM/RR'),'264','2561549852362010','5');
+/
+Insert into SYSTEM.TARJETA_CREDITO (ID_FORMA_PAGO,TIPO,NOMBRE,FECHA_VENCI,NUM_SEGURIDAD,NUM_TAJETA,ID_US) values (null,'visa','DORITA CAMIﾃ前',to_date('18/07/22','DD/MM/RR'),'230','1528754854215600','6');
+/
+Insert into SYSTEM.TARJETA_CREDITO (ID_FORMA_PAGO,TIPO,NOMBRE,FECHA_VENCI,NUM_SEGURIDAD,NUM_TAJETA,ID_US) values (null,'mastercard','ASUCENA DIAZ',to_date('07/12/23','DD/MM/RR'),'586','6589698774698520','7');
+/
+Insert into SYSTEM.TARJETA_CREDITO (ID_FORMA_PAGO,TIPO,NOMBRE,FECHA_VENCI,NUM_SEGURIDAD,NUM_TAJETA,ID_US) values (null,'visa','LUIS DIBARBOURE',to_date('16/03/21','DD/MM/RR'),'458','2798568745852000','8');
+/
+Insert into SYSTEM.TARJETA_CREDITO (ID_FORMA_PAGO,TIPO,NOMBRE,FECHA_VENCI,NUM_SEGURIDAD,NUM_TAJETA,ID_US) values (null,'mastercard','NESTOR DANIEL GARCIA',to_date('19/02/24','DD/MM/RR'),'785','2545521658985400','9');
+/
+Insert into SYSTEM.TARJETA_CREDITO (ID_FORMA_PAGO,TIPO,NOMBRE,FECHA_VENCI,NUM_SEGURIDAD,NUM_TAJETA,ID_US) values (null,'visa','LUIS LEONARDO GARCIA',to_date('08/03/24','DD/MM/RR'),'638','1542548792586500','10');
+/
+Insert into SYSTEM.TARJETA_CREDITO (ID_FORMA_PAGO,TIPO,NOMBRE,FECHA_VENCI,NUM_SEGURIDAD,NUM_TAJETA,ID_US) values (null,'visa','MARIA INES ABADIE',to_date('23/11/20','DD/MM/RR'),'258','5835543812395360','1');
+/
+Insert into SYSTEM.TARJETA_CREDITO (ID_FORMA_PAGO,TIPO,NOMBRE,FECHA_VENCI,NUM_SEGURIDAD,NUM_TAJETA,ID_US) values (null,'mastercard','RAQUEL ELIZABET ABAL',to_date('06/08/23','DD/MM/RR'),'467','9184833006037700','2');
+/
+/*MONEDERO VIRTUAL*/
+Insert into SYSTEM.MONEDERO_VIRTUAL (ID_FORMA_PAGO,SALDOACTUAL,ID_US) values (null,'0','1');
+/
+Insert into SYSTEM.MONEDERO_VIRTUAL (ID_FORMA_PAGO,SALDOACTUAL,ID_US) values (null,'0','2');
+/
+Insert into SYSTEM.MONEDERO_VIRTUAL (ID_FORMA_PAGO,SALDOACTUAL,ID_US) values (null,'0','3');
+/
+Insert into SYSTEM.MONEDERO_VIRTUAL (ID_FORMA_PAGO,SALDOACTUAL,ID_US) values (null,'0','4');
+/
+Insert into SYSTEM.MONEDERO_VIRTUAL (ID_FORMA_PAGO,SALDOACTUAL,ID_US) values (null,'0','5');
+/
+Insert into SYSTEM.MONEDERO_VIRTUAL (ID_FORMA_PAGO,SALDOACTUAL,ID_US) values (null,'0','6');
+/
+Insert into SYSTEM.MONEDERO_VIRTUAL (ID_FORMA_PAGO,SALDOACTUAL,ID_US) values (null,'0','7');
+/
+Insert into SYSTEM.MONEDERO_VIRTUAL (ID_FORMA_PAGO,SALDOACTUAL,ID_US) values (null,'0','8');
+/
+Insert into SYSTEM.MONEDERO_VIRTUAL (ID_FORMA_PAGO,SALDOACTUAL,ID_US) values (null,'0','9');
+/
+Insert into SYSTEM.MONEDERO_VIRTUAL (ID_FORMA_PAGO,SALDOACTUAL,ID_US) values (null,'0','10');
+/
+
+/*FAVORITO*/
+
+Insert into SYSTEM.FAVORITO (ID_US,ID_COND) values ('1','1');
+/
+Insert into SYSTEM.FAVORITO (ID_US,ID_COND) values ('1','2');
+/
+Insert into SYSTEM.FAVORITO (ID_US,ID_COND) values ('2','1');
+/
+
+
+/*HISTORICO_MONEDERO_KM*/
+insert into HIST_PRECIO_KM values (null, 2000, sysdate, 'true');
+/
+
+
