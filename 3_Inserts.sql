@@ -1594,8 +1594,22 @@ INSERT INTO VEHICULO VALUES (6,'AA473FJ','FORD','BEIGE','true','false','true',20
 INSERT INTO VEHICULO VALUES (7,'AA593TK','BMW','AZUL','true','true','false',2008,BFILENAME('DIR_TAXI/DOC_PROD', 'prod7.pdf'),BFILENAME('DIR_TAXI/CARN_CIRC', 'carnet7.pdf'),'inactivo');
 INSERT INTO VEHICULO VALUES (8,'AA470ER','BMW','ROJO','true','false','false',2015,BFILENAME('DIR_TAXI/DOC_PROD', 'prod8.pdf'),BFILENAME('DIR_TAXI/CARN_CIRC', 'carnet8.pdf'),'activo');
 INSERT INTO VEHICULO VALUES (9,'AA953AE','FIAT','BLANCO','true','false','true',2015,BFILENAME('DIR_TAXI/DOC_PROD', 'prod9.pdf'),BFILENAME('DIR_TAXI/CARN_CIRC', 'carnet9.pdf'),'activo');
-INSERT INTO VEHICULO VALUES (10,'AA436CS','FIAT','BLANCO','true','false','false',2015,BFILENAME('DIR_TAXI/DOC_PROD', 'prod10.pdf'),BFILENAME('DIR_TAXI/CARN_CIRC', 'carnet10.pdf'),'activo');
-INSERT INTO VEHICULO VALUES (11,'AA743FK','DODGE','BLANCO','false','true','false',2000,BFILENAME('DIR_TAXI/DOC_PROD', 'prod11.pdf'),BFILENAME('DIR_TAXI/CARN_CIRC', 'carnet11.pdf'),'activo');
-INSERT INTO VEHICULO VALUES (12,'AA464ND','DODGE','GRIS','false','true','true',2000,BFILENAME('DIR_TAXI/DOC_PROD', 'prod12.pdf'),BFILENAME('DIR_TAXI/CARN_CIRC', 'carnet12.pdf'),'inactivo');
+INSERT INTO VEHICULO VALUES (10,'AA464ND','DODGE','GRIS','false','true','true',2000,BFILENAME('DIR_TAXI/DOC_PROD', 'prod12.pdf'),BFILENAME('DIR_TAXI/CARN_CIRC', 'carnet12.pdf'),'inactivo');
+
+/
+
+/*INSPECCION*/
+INSERT INTO INSPECCION VALUES (1,01/01/2019,'si','el vehiculo paso todas las pruebas',1,1);
+INSERT INTO INSPECCION VALUES (2,01/01/2019,'si','el vehiculo paso todas las pruebas',2,2);
+INSERT INTO INSPECCION VALUES (3,02/01/2019,'si','el vehiculo paso todas las pruebas',3,3);
+INSERT INTO INSPECCION VALUES (4,02/01/2019,'no','el vehiculo paso todas las pruebas',4,4);
+INSERT INTO INSPECCION VALUES (5,03/01/2019,'si','el vehiculo paso todas las pruebas',5,5);
+INSERT INTO INSPECCION VALUES (6,04/01/2019,'si','el vehiculo paso todas las pruebas',6,6);
+INSERT INTO INSPECCION VALUES (7,05/01/2019,'no','el vehiculo paso todas las pruebas',7,7);
+INSERT INTO INSPECCION VALUES (8,06/01/2019,'si','el vehiculo paso todas las pruebas',7,7);
+INSERT INTO INSPECCION VALUES (9,07/01/2019,'si','el vehiculo paso todas las pruebas',8,8);
+INSERT INTO INSPECCION VALUES (10,01/01/2019,'si','el vehiculo paso todas las pruebas',9,9);
+INSERT INTO INSPECCION VALUES (10,07/01/2019,'no','el vehiculo paso todas las pruebas',10,10);
+
 
 /
